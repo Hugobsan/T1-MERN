@@ -1,15 +1,17 @@
 import dbConfig from "../config/db.config";
-
+// import tutorials
 import {Mongoose} from "mongoose";
 
 const mongoose = new Mongoose();
 
 mongoose.Promise = global.Promise;
 
-const db = {};
+const db = {
+    mongoose,
+    url: dbConfig.url,
+    tutorials: 
+};
 
-db.mongoose = mongoose;
-db.url = dbConfig.url;
-db.tutorials = require("./tutorial.model.ts")(mongoose);
+// db.tutorials = require("./tutorial.model.ts")(mongoose);
 
-module.exports = db;
+// module.exports = db;
