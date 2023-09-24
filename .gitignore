@@ -13,6 +13,8 @@
 
 # misc
 **.DS_Store
+T1-MERN with Typescript/app-backend/.env
+**.env
 **.env.local
 **.env.development.local
 **.env.test.local
