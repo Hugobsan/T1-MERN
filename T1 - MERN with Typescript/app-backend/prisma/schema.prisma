@@ -1,0 +1,16 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+// Definição do model Tutorial que será usado pelo Prisma para criar o schema no banco de dados
+model Tutorial{
+    id          String  @id @default(auto()) @map("_id") @db.ObjectId
+    title       String
+    description String
+    published   Boolean
+}
